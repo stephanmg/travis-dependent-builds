@@ -4,7 +4,7 @@ Try to trigger downstream Travis projects from upstream Travis projects
 hosted on github with a miminum of cluttering your current `travis.yml`
 configuration of the upstream project (see prerequisites please).
 
-Consider the following scenario (cf. figure below), i. e. the *DOWNSTREAM* 
+Consider the following scenario (cf. figure below), i.e. the *DOWNSTREAM* 
 projects depend on the *UPSTREAM* project and need to be build if the
 *UPSTREAM* project was triggered by a new commit. Therefore we
 can ensure, if the *UPSTREAM* project has changed and was tested
@@ -84,14 +84,11 @@ to trigger (cf. prerequisites below).
 ### Prerequisites
 
 1. Token
-
 As a prerequisit you need to generate a TOKEN from Github's website,
 e. g. go to your user profile, navigate to settings, generate an
 as restrictive as possible TOKEN, and assign it a name, e. g. 
 *TRAVIS*.
-
 2. Settings 
-
 Next, navigate to your Travis projects, for instance if your user is
 *stephanmg* (github/travis) and your project *downstream* then go to:
 https://travis-ci.org/stephanmg/downstream/settings
@@ -104,9 +101,7 @@ and for instance trigger a new build (this could also be a downstream
 project of a different user, if you know the variable which is used
 for the TOKEN, e. g. could be different than TRAVIS_ACCESS_TOKEN, and
 the corresponding username and of course the repository name itself)
-
 * Optionally specify a branch to use
-
 * Optionally multiple trigger statements
 
 In the *after_script* section you could then have a various of `trigger`
