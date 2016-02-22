@@ -4,13 +4,20 @@ Try to trigger downstream Travis projects from upstream Travis projects
 hosted on github with a miminum of cluttering your current `travis.yml`
 configuration of the upstream project (see prerequisites please).
 
-Consider the following scenario, i. e. the *DOWNSTREAM* project
-dependent on the *UPSTREAM* project and need to be build if the
-*DOWNSTREAM* project was triggered by a new commit. Therefore we
+Consider the following scenario (cf. figure below), i. e. the *DOWNSTREAM* 
+projects depend on the *UPSTREAM* project and need to be build if the
+*UPSTREAM* project was triggered by a new commit. Therefore we
 can ensure, if the *UPSTREAM* project has changed and was tested
 with success, that the dependent *DOWNSTREAM* projects are also
-tested against the changes in the upstream project, to make sure
-they did not harm the *DOWNSTREAM* projects.
+tested against the changes in the upstream project. This is to 
+make sure that the changes in the *UPSTREAM* project  did really not
+ harm the *DOWNSTREAM* projects by this given commit.
+
+Please note, if a dependent project has been triggered by our
+scripts, we log a message in the dependent Travis project (i. e.
+triggered by upstream project with commit id 1c1234), to make it easy 
+to find the commit of the *UPSTREAM* project which triggered the current
+dependent project build and eventually made the *DOWNSTREAM* project fail.
 
 ![Dependent builds](/data/img/travis-dependent-builds.png)
 
