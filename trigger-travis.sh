@@ -6,6 +6,7 @@
 USER=$1
 REPO=$2
 TRAVIS_ACCESS_TOKEN=$3
+BRANCH=$4
 
 travis login --skip-completion-check --github-token $TRAVIS_ACCESS_TOKEN
 travis whoami --skip-completion-check
@@ -30,7 +31,7 @@ echo "REPO=$REPO"
 
 body="{
 \"request\": {
-  \"branch\":\"master\"
+  \"branch\":\"$BRANCH\"
   $MESSAGE
 }}"
 
