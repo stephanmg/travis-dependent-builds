@@ -111,3 +111,6 @@ information in `dependent-builds.yml` file.
 
 # Questions
 Feel free to message me - [see my profile](https://github.com/stephanmg)
+
+# See 
+[Travis API documentation](https://docs.travis-ci.com/user/triggering-builds/)
