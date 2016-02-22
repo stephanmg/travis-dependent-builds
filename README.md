@@ -1,11 +1,10 @@
-# travis-dependenet-builds
+# travis-dependent-builds
 
 Try to trigger downstream Travis projects from upstream Travis projects
 hosted on github with a miminum of cluttering your current ```travis.yml```
 configuration of the upstream project (see prerequisites please).
 
 ## Usage
-
 Consider you have an empty Python downstream project, e. g.
 
 ```yml
@@ -66,7 +65,7 @@ https://travis-ci.org/stephanmg/downstream/settings
 
 There you need to define a variable, termed e. g. TRAVIS_ACCESS_TOKEN
 and assign the value of the TOKEN you generated previously. This variable
-will be available in our ```travis.yml`` file by $TRAVIS_ACCESS_TOKEN.
+will be available in our `travis.yml` file by $TRAVIS_ACCESS_TOKEN.
 
 This allows you to login passwordless in a e. g. shell script on the
 travis build environment to your given downstream travis project,
@@ -78,7 +77,7 @@ the corresponding username and of course the repository name itself)
 3. Optionally specify a branch to use
 
 
-In the *after_script* section you could then have a various of ```trigger```
+In the *after_script* section you could then have a various of `trigger`
 statements, e. g.:
 ```yml
 after_script:
@@ -88,4 +87,4 @@ after_script:
 ```
 
 ## Questions
-Feel free to message me - stephan@syntaktischer-zucker.de.
+Feel free to message me - stephan@syntaktischer-zucker.de
