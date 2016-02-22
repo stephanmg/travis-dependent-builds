@@ -4,6 +4,16 @@ Try to trigger downstream Travis projects from upstream Travis projects
 hosted on github with a miminum of cluttering your current `travis.yml`
 configuration of the upstream project (see prerequisites please).
 
+Consider the following scenario, i. e. the *DOWNSTREAM* project
+dependent on the *UPSTREAM* project and need to be build if the
+*DOWNSTREAM* project was triggered by a new commit. Therefore we
+can ensure, if the *UPSTREAM* project has changed and was tested
+with success, that the dependent *DOWNSTREAM* projects are also
+tested against the changes in the upstream project, to make sure
+they did not harm the *DOWNSTREAM* projects.
+
+![Dependent builds](/data/img/travis-dependent-builds.png)
+
 ## Usage
 Consider you have an empty Python upstream project for now, e. g.:
 
