@@ -1,7 +1,7 @@
 # travis-dependent-builds
 
 Try to trigger downstream Travis projects from upstream Travis projects
-hosted on github with a miminum of cluttering your current ```travis.yml```
+hosted on github with a miminum of cluttering your current `travis.yml`
 configuration of the upstream project (see prerequisites please).
 
 ## Usage
@@ -55,20 +55,20 @@ after_script:
 ### Prerequisites
 
 1. Token
+
 As a prerequisit you need to generate a TOKEN from Github's website,
 e. g. go to your user profile, navigate to settings, generate an
 as restrictive as possible TOKEN, and assign it a name, e. g. 
 *TRAVIS*.
 
 2. Settings 
+
 Next, navigate to your Travis projects, for instance if your user is
 *stephanmg* (github/travis) and your project *downstream* then go to:
 https://travis-ci.org/stephanmg/downstream/settings
-
 There you need to define a variable, termed e. g. TRAVIS_ACCESS_TOKEN
 and assign the value of the TOKEN you generated previously. This variable
 will be available in our `travis.yml` file by $TRAVIS_ACCESS_TOKEN.
-
 This allows you to login passwordless in a e. g. shell script on the
 travis build environment to your given downstream travis project,
 and for instance trigger a new build (this could also be a downstream
@@ -78,8 +78,11 @@ the corresponding username and of course the repository name itself)
 
 * Optionally specify a branch to use
 
+* Optionally multiple trigger statements
+
 In the *after_script* section you could then have a various of `trigger`
 statements, e. g.:
+
 ```yml
 after_script:
    - ./trigger.sh stephanmg downstream master $TRAVIS_ACCESS_TOKEN 
@@ -88,4 +91,4 @@ after_script:
 ```
 
 ## Questions
-Feel free to message me - stephan@syntaktischer-zucker.de
+Feel free to message me - [see my profile](https://github.com/stephanmg)
