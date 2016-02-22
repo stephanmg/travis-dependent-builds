@@ -54,12 +54,14 @@ after_script:
 
 ### Prerequisites
 
-1. As a prerequisit you need to generate a TOKEN from Github's website,
+1. Token
+As a prerequisit you need to generate a TOKEN from Github's website,
 e. g. go to your user profile, navigate to settings, generate an
 as restrictive as possible TOKEN, and assign it a name, e. g. 
 *TRAVIS*.
 
-2. Next, navigate to your Travis projects, for instance if your user is
+2. Settings 
+Next, navigate to your Travis projects, for instance if your user is
 *stephanmg* (github/travis) and your project *downstream* then go to:
 https://travis-ci.org/stephanmg/downstream/settings
 
@@ -74,8 +76,7 @@ project of a different user, if you know the variable which is used
 for the TOKEN, e. g. could be different than TRAVIS_ACCESS_TOKEN, and
 the corresponding username and of course the repository name itself)
 
-3. Optionally specify a branch to use
-
+* Optionally specify a branch to use
 
 In the *after_script* section you could then have a various of `trigger`
 statements, e. g.:
