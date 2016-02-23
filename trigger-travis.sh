@@ -1,7 +1,6 @@
 #!/bin/bash
 ## brief: trigger a downstream travis build
 ## see: travis API documentation
-##
 
 # variables
 USER=$1
