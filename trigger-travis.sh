@@ -7,6 +7,7 @@ USER=$1
 REPO=$2
 TRAVIS_ACCESS_TOKEN=$3
 BRANCH=$4
+MESSAGE=$5
 
 travis login --skip-completion-check --github-token $TRAVIS_ACCESS_TOKEN
 travis whoami --skip-completion-check
@@ -16,8 +17,8 @@ echo "Token: ${array[${#array[@]}-1]}"
 MY_TOKEN=${array[${#array[@]}-1]}
 TOKEN=$MY_TOKEN
 
-if [ $# -eq 4 ] ; then
-    MESSAGE=",\"message\": \"$4\""
+if [ $# -eq 5 ] ; then
+    MESSAGE=",\"message\": \"$5\""
 elif [ -n "$TRAVIS_REPO_SLUG" ] ; then
     MESSAGE=",\"message\": \"Triggered by upstream build of $TRAVIS_REPO_SLUG commit "`git rev-parse --short HEAD`"\""
 else

@@ -121,6 +121,11 @@ flexible, i. e. allow for different branches
 `travis.yml` file to `./trigger.sh --conf dependent-builds.yml`, i. e. storing all relevant
 information in `dependent-builds.yml` file.
 
+# Caveats
+If you're using a build matrix for your *UPSTREAM* project, then for each entry
+you end up with a triggered *DOWNSTREAM* project. There might be a workaround for
+this in the future - or if included in the Travis API soon hopefully.
+
 # Questions
 Feel free to message me - [see my profile](https://github.com/stephanmg)
 
