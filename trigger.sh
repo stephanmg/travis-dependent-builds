@@ -14,7 +14,7 @@ TRAVIS_ACCESS_TOKEN=$4
 MESSAGE=$5
 
 # check for correct input
-if [[ $# < 4 ]] && usage()
+#if [[ $# < 4 ]] && usage()
 
 # trigger build if above conditions hold
 if [[ ($TRAVIS_BRANCH == $3) &&
@@ -25,6 +25,6 @@ if [[ ($TRAVIS_BRANCH == $3) &&
 fi
 
 # usage function
-function usage {
-   echo "$(basename $0): USER DOWNSTREAM_REPOSITORY BRANCH TRAVIS_ACCESS_TOKEN"
-}
+#function usage {
+ #  echo "$(basename $0): USER DOWNSTREAM_REPOSITORY BRANCH TRAVIS_ACCESS_TOKEN"
+#}
