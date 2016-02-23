@@ -10,9 +10,10 @@ USER=$1
 DOWNSTREAM_REPO=$2
 BRANCH=$3
 TRAVIS_ACCESS_TOKEN=$4
+MESSAGE=$5
 
 # check for correct input
-if [[ ! $# == 4 ]] && usage
+if [[ $# < 4 ]] && usage
 
 # trigger build if above conditions hold
 if [[ ($TRAVIS_BRANCH == $3) &&
@@ -21,7 +22,7 @@ if [[ ($TRAVIS_BRANCH == $3) &&
    ./trigger-travis.sh $1 $2 $4 $3
 fi
 
-# help function
-usage() {
+# usage function
+function usage {
    echo "$(basename $0): USER DOWNSTREAM_REPOSITORY BRANCH TRAVIS_ACCESS_TOKEN"
 }
