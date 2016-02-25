@@ -46,7 +46,6 @@ before_script:
 
 after_script:
    - curl -LO https://raw.github.com/stephanmg/travis-dependent-builds/master/trigger.sh
-   - curl -LO https://raw.github.com/stephanmg/travis-dependent-builds/master/trigger-travis.sh
    - chmod +x trigger.sh
    - ./trigger.sh stephanmg downstream master $TRAVIS_ACCESS_TOKEN 
 ```
@@ -67,15 +66,14 @@ script:
 
 after_script:
    - curl -LO https://raw.github.com/stephanmg/travis-dependent-builds/master/trigger.sh
-   - curl -LO https://raw.github.com/stephanmg/travis-dependent-builds/master/trigger-travis.sh
    - chmod +x trigger.sh
    - ./trigger.sh stephanmg downstream master $TRAVIS_ACCESS_TOKEN 
 ```
 
 ### Explanation
-The two curl statements, fetch the most recent version of the helper scripts
-`trigger.sh` and `trigger-travis.sh` from the repository you are currently
-reading this README. The `chmod` makes the trigger.sh script executable.
+The first curl statement, fetch the most recent version of the helper scripts
+`trigger.sh` from the repository you are currently reading this README. 
+The `chmod` makes the trigger.sh script executable.
 The next line actually triggers a downstream project, termed *downstream*, 
 of the github/travis user *stephanmg*, if the upstream project uses the 
 master branch then a new build of the corresponding master branch of 
