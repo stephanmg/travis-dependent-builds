@@ -14,7 +14,7 @@ TRAVIS_ACCESS_TOKEN=$4
 MESSAGE=$5
 
 # fetch trigger-travis script and make executable
-curl -LO https://raw.github.com/stephanmg/travis-dependent-builds/master/trigger-travis.sh
+curl -LO "https://raw.github.com/stephanmg/travis-dependent-builds/master/trigger-travis.sh"
 chmod +x trigger-travis.sh
 
 # check for correct input
