@@ -23,8 +23,8 @@ chmod +x trigger-travis.sh
 #fi
 
 # trigger build if above conditions hold
-if [[ ($TRAVIS_BRANCH == $3) &&
-   ($TRAVIS_PULL_REQUEST == false) &&
+#if [[ ($TRAVIS_BRANCH == $3) &&
+if [[ ($TRAVIS_PULL_REQUEST == false) &&
    ( (! $TRAVIS_JOB_NUMBER == *.*) || ($TRAVIS_JOB_NUMBER == *.1) ) ]] ; then
    chmod +x trigger-travis.sh
    ./trigger-travis.sh $1 $2 $4 $3 $5
