@@ -18,9 +18,9 @@ curl -LO "https://raw.github.com/stephanmg/travis-dependent-builds/master/trigge
 chmod +x trigger-travis.sh
 
 # check for correct input
-if [ $# -lt 4 ] ; then
-   usage()
-fi
+#if [ $# -lt 4 ] ; then
+ #  usage()
+#fi
 
 # trigger build if above conditions hold
 if [[ ($TRAVIS_BRANCH == $3) &&
