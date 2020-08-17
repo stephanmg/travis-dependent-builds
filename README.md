@@ -1,8 +1,14 @@
 # travis-dependent-builds
 
 Try to trigger downstream Travis projects from upstream Travis projects
-hosted on github with a miminum of cluttering your current `travis.yml`
-configuration of the upstream project (see prerequisites please).
+hosted on Github with a miminum of cluttering your current `travis.yml`
+configuration of the upstream project (see the prerequisites please).
+
+This will also work if your upstream project belongs to a different
+organization or user (inter-project/inter-organization build dependencies).
+One needs to generate a Travis access token to use the Travis API, adding
+the token to the upstream project, will enable to trigger downstream projects
+which are owned by the user of the Travis access token.
 
 Consider the following scenario (cf. figure below), i.e. the *DOWNSTREAM* 
 projects depend on the *UPSTREAM* project and need to be build if the
