@@ -93,19 +93,22 @@ to trigger (cf. prerequisites below).
 e. g. go to your user profile, navigate to settings, generate an
 as restrictive as possible Github token, and assign it a name, e. g. Travis.
 2. Set the value of TRAVIS_ACCESS_TOKEN in the settings section of the corresponding upstream Travis project.
-Assign an environemnt variable for the TRAVIS_ACCESS_TOKEN which is your Github user access token (Travis).
+Assign an environment variable for the TRAVIS_ACCESS_TOKEN which is your Github user access token (Travis).
+Make sure you do not enable (Include value in build log for security reasons!)
+3. Trigger *downstream* project from *upstream* project with `trigger.sh`.
 
 Example:
 Navigate to your Travis projects, for instance if your user is
 *stephanmg* (github/travis) and your project *downstream* and *upstream* then go to:
 https://travis-ci.org/stephanmg/upstream/settings
 There you need to define a variable, termed e. g. TRAVIS_ACCESS_TOKEN
-and assign the value of the TOKEN you generated previously in Github (user access token: Travis). 
+and assign the value of the token you generated previously in Github (user access token: Travis). 
 This variable will be available in our `travis.yml` file by $TRAVIS_ACCESS_TOKEN.
 This allows you to login with your user passwordless in a e. g. shell script on the
-travis build environment in your given upstream travis project *upstream*.
-Once logged in, use the `trigger.sh` script to trigger a new build 
-(this could also be a downstream project of a different user or organization you have access to)
+travis build environment and use the Travsi API in your given upstream travis project *upstream*
+to trigger a *downstream* project.
+Once logged in, use the `trigger.sh` script to trigger a new build with some options (See below).
+Note that this could also be a downstream project of a different user or organization you have access to!
 * Optionally specify a branch to use
 * Optionally multiple trigger statements
 
