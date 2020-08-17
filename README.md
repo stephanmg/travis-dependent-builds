@@ -93,8 +93,7 @@ to trigger (cf. prerequisites below).
 As a prerequisit you need to generate a TOKEN from Github's website,
 e. g. go to your user profile, navigate to settings, generate an
 as restrictive as possible TOKEN, and assign it a name, e. g. 
-*TRAVIS*
-~~
+*TRAVIS*~~
 1. Generate a Travis API token from here: https://docs.travis-ci.com/user/triggering-builds
 The Travis API access token can be added to the upstream project as an environment variable,
 `TRAVIS_ACCESS_TOKEN`. Make sure you do not enable (Show value in build log in Travis settings)
