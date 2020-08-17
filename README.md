@@ -1,8 +1,7 @@
 # travis-dependent-builds
 
 Try to trigger downstream Travis projects from upstream Travis projects
-hosted on Github with a miminum of cluttering your current `travis.yml`
-configuration of the upstream project (see the prerequisites please).
+hosted on Github (See the prerequisites below please).
 
 This will also work if your upstream project belongs to a different
 organization or user (inter-project/inter-organization build dependencies).
