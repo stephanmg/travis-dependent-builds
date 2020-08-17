@@ -89,27 +89,23 @@ to trigger (cf. prerequisites below).
 
 ### Prerequisites
 
-~~1. Token
-As a prerequisit you need to generate a TOKEN from Github's website,
+1. Github Token: As a prerequisit you need to generate a user access token from Github's website,
 e. g. go to your user profile, navigate to settings, generate an
-as restrictive as possible TOKEN, and assign it a name, e. g. 
-*TRAVIS*~~
-1. Generate a Travis API token from here: https://docs.travis-ci.com/user/triggering-builds
-The Travis API access token can be added to the upstream project as an environment variable,
-`TRAVIS_ACCESS_TOKEN`. Make sure you do not enable (Show value in build log in Travis settings)
-2. Settings 
-Next, navigate to your Travis projects, for instance if your user is
-*stephanmg* (github/travis) and your project *downstream* then go to:
-https://travis-ci.org/stephanmg/downstream/settings
+as restrictive as possible Github token, and assign it a name, e. g. Travis.
+2. Set the value of TRAVIS_ACCESS_TOKEN in the settings section of the corresponding upstream Travis project.
+Assign an environemnt variable for the TRAVIS_ACCESS_TOKEN which is your Github user access token (Travis).
+
+Example:
+Navigate to your Travis projects, for instance if your user is
+*stephanmg* (github/travis) and your project *downstream* and *upstream* then go to:
+https://travis-ci.org/stephanmg/upstream/settings
 There you need to define a variable, termed e. g. TRAVIS_ACCESS_TOKEN
-and assign the value of the TOKEN you generated previously. This variable
-will be available in our `travis.yml` file by $TRAVIS_ACCESS_TOKEN.
-This allows you to login passwordless in a e. g. shell script on the
-travis build environment to your given downstream travis project,
-and for instance trigger a new build (this could also be a downstream
-project of a different user, if you know the variable which is used
-for the TOKEN, e. g. could be different than TRAVIS_ACCESS_TOKEN, and
-the corresponding username and of course the repository name itself)
+and assign the value of the TOKEN you generated previously in Github (user access token: Travis). 
+This variable will be available in our `travis.yml` file by $TRAVIS_ACCESS_TOKEN.
+This allows you to login with your user passwordless in a e. g. shell script on the
+travis build environment in your given upstream travis project *upstream*.
+Once logged in, use the `trigger.sh` script to trigger a new build 
+(this could also be a downstream project of a different user or organization you have access to)
 * Optionally specify a branch to use
 * Optionally multiple trigger statements
 
