@@ -34,3 +34,5 @@ fi
 function usage {
    echo "$(basename $0): USER DOWNSTREAM_REPOSITORY BRANCH TRAVIS_ACCESS_TOKEN"
 }
+
+exit 0
