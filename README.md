@@ -3,7 +3,7 @@
 Try to trigger downstream Travis projects from upstream Travis projects
 hosted on Github (See the prerequisites below please).
 
-[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 This will also work if your upstream project belongs to a different
 organization or user (inter-project/inter-organization build dependencies).
