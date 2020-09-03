@@ -1,9 +1,12 @@
 # travis-dependent-builds
 
+
 Try to trigger downstream Travis projects from upstream Travis projects
 hosted on Github (See the prerequisites below please).
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+Note: If you need to trigger dependent builds with Appveyor, look at my gist here: [Trigger Appveyor dependent build](https://gist.github.com/stephanmg/d5b97401f079aa58239f8f5d828efe52)
 
 This will also work if your upstream project belongs to a different
 organization or user (inter-project/inter-organization build dependencies).
@@ -124,7 +127,7 @@ after_script:
    - ./trigger ...
 ```
 
-# Future enhancements on demand
+# Possible future features
 * upstream and downstream project branch are assumed to be the same, this could be more
 flexible, i. e. allow for different branches
 * provide a configuration file for the `trigger.sh` script, i. e. reduce call in your
